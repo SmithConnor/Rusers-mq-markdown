@@ -1,0 +1,31 @@
+---
+title: "lotr-example"
+author: "Dr Connor Smith"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## R Markdown
+
+```{r load_data, echo=FALSE}
+lotr <- read.delim("lotr_clean.tsv")
+
+# Fill the following information in
+# options: Bilbo, Frodo, Gandalf, Aragorn, Saruman, Lurtz
+fav_char <- "Lurtz"
+```
+
+In the Lord of the Rings, my favourite charater is `r fav_char`. We can check how many words `r fav_char` spoke during the movie with the following code:
+
+```{r words_spoken}
+lotr_fav <- lotr %>%
+  filter(Character == fav_char) %>%
+  summarise(Total_Words = sum(Words))
+```
+
+I'm not sure this is correct but it seems that `r fav_char` only spoke `r lotr_fav` words in the entire movie.

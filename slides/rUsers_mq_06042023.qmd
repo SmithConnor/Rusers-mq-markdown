@@ -83,6 +83,14 @@ When describing R Markdown, I would use the following words:
 :::
 :::
 
+## LotR Data
+
+### Jennifer Bryan (POSIT)
+
+<hr size="2rem" color="#373A36">
+
+For this wrokshop we have used sections of code and data from https://github.com/jennybc/lotr-tidy.
+
 #
 
 ::: {.columns .v-center-container}
