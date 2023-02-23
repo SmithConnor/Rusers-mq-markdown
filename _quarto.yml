@@ -1,0 +1,8 @@
+project:
+  title: "Rusers-mq-markdown"
+  output-dir: _output
+  render:
+  - "slides/"
+
+
+

@@ -1,0 +1,126 @@
+---
+title: "R Markdown: The One Tool to Rule Them All"
+subtitle: "(And In the Darkness Bind Them)"
+author: "Dr Connor Smith"
+institute: "School of Mathematical and Physical Sciences"
+format: 
+  mq-revealjs:
+    width: 1920
+    height: 1080
+    highlight-style: github
+---
+
+# 
+
+::: {.columns .v-center-container}
+::: {.column width="35%"}
+![](_extensions/SmithConnor/mq/MQ-diag-partial.png)
+:::
+
+::: {.column width="65%"}
+[Overview]{.section-header-text}
+
+[What is R Markdown?]{.section-subheader-text}
+:::
+:::
+
+## Words to describe R Markdown
+
+### ChatGPT
+
+<hr size="2rem" color="#373A36">
+
+```{r}
+#| echo: false
+library(wordcloud)
+library(RColorBrewer)
+```
+
+```{r}
+words <- c("Flexible", "Efficient", "Versatile", "Dynamic", "Easy", "Powerful", 
+           "Customizable", "Automated", "Interpretable", "Collaborative", 
+           "Elegant", "Fast", "Productive", "Intuitive", "Integrated", 
+           "Consistent", "Clear", "Robust", "Portable", "Creative")
+
+set.seed(123)
+freq <- sample.int(10, length(words), replace = TRUE)
+wordcloud(words, colors = brewer.pal(length(words), "Set1"), 
+          random.order = FALSE, max.words = length(words), 
+          scale = c(4, 0.5), freq = freq)
+```
+
+## How to describe R Markdown
+
+### Person
+
+<hr size="2rem" color="#373A36">
+
+When describing R Markdown, I would use the following words:
+
+<br>
+
+1. Reproducible
+
+2. Reports
+
+3. Code
+
+4. Plain-text
+
+5. Useful
+
+#
+
+::: {.columns .v-center-container}
+::: {.column width="35%"}
+![](_extensions\SmithConnor\mq\MQ-diag-partial.png)
+:::
+
+::: {.column width="65%"}
+[Writing Text]{.section-header-text}
+
+[1/3]{.section-subheader-text}
+:::
+:::
+
+#
+
+::: {.columns .v-center-container}
+::: {.column width="35%"}
+![](_extensions\SmithConnor\mq\MQ-diag-partial.png)
+:::
+
+::: {.column width="65%"}
+[Writing Code]{.section-header-text}
+
+[2/3]{.section-subheader-text}
+:::
+:::
+
+#
+
+::: {.columns .v-center-container}
+::: {.column width="35%"}
+![](_extensions\SmithConnor\mq\MQ-diag-partial.png)
+:::
+
+::: {.column width="65%"}
+[Writing Metadata]{.section-header-text}
+
+[3/3]{.section-subheader-text}
+:::
+:::
+
+#
+
+::: {.columns .v-center-container}
+::: {.column width="35%"}
+![](_extensions\SmithConnor\mq\MQ-diag-partial.png)
+:::
+
+::: {.column width="65%"}
+[Final Stages of our Journey]{.section-header-text}
+
+[A wizard is never late, Frodo Baggins. Nor is he early. He writes his R Markdown reports precisely when he means to.]{.section-subheader-text}
+:::
+:::
