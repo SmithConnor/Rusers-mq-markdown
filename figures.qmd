@@ -10,18 +10,87 @@ The section will assist you with including tables and figures into your RMarkdow
 
 ## Tables
 
+### Text
+
+| Shape   | Sides | Other             |
+|---------|-------|-------------------|
+| Circle  | 1     | Comfortable ring. |
+| Triange | 3     | Umm.....          |
+| Square  | 4     | Yeah nah          |
+
+: Not the round table!
+
+```{r}
+#| eval: false
+
+| Shape   | Sides | Other             |
+|---------|-------|-------------------|
+| Circle  | 1     | Comfortable ring. |
+| Triange | 3     | Umm.....          |
+| Square  | 4     | Yeah nah          |
+```
+
+### Code
+
+```{r}
+library(kableExtra)
+
+# create fake data
+df <- data.frame(
+  names = c("Donald Duck", "Mickey Mouse", "Goofy"),
+  salaries = c(100000, 150000, 50000)
+)
+
+# create the table
+kable(df, "html") %>%
+  kable_styling(bootstrap_options = "striped")
+
+
+```
+
 ## Figures
 
 ### Generated
 
+Reproducible figures can be generated in the RMarkdown document in a code chunk.
+
+```{r}
+library(ggplot2)
+
+# create fake data
+df <- data.frame(
+  category = c("Cats", "Dogs", "Birds"),
+  count = c(15, 27, 10)
+)
+
+# create the plot
+ggplot(df, aes(x = category, y = count, fill = category)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Animals that stole my heart",
+       subtitle = "But not my socks",
+       x = "Animal",
+       y = "Number of times stolen") +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5),
+        legend.position = "none")
+```
+
 ### External
+
+![Connor Smith holding the "One ring to rule them all"](dall_e_connor.png)
+
+```{r}
+#| eval: false
+![Connor Smith holding the "One ring to rule them all"](dall_e_connor.png)
+```
 
 ### Chunk options
 
 Below is a curated list of chunk options for figures. As you learn more, this list might vary for you.
 
 | Option       | Description                                                                 |
-|--------------|-----------------------------------------------------------------------------|
+|-----------------|-------------------------------------------------------|
 | `fig.height` | Height of the figure in inches. (Coded as 9 not "9")                        |
 | `fig.width`  | Width of the figure in inches. (Coded as 9 not "9")                         |
 | `fig.align`  | Where do you want your figure i.e. `default`, `centre`, `left`, or `right`? |
@@ -37,7 +106,6 @@ knitr::opts_chunk$set(chunk_option1 = TRUE, chunk_option2 = FALSE, ...)
 ```
 
 ::: callout-important
-
 Best practice is to save all your figures. This can be done by inserting the following code into your YAML header:
 
 ```{yaml}
@@ -47,16 +115,13 @@ output:
 ```
 
 **Note:** This code will be different if you are using a different output format.
-
 :::
 
 ### Exercise
 
 Change the figure in `lotr.Rmd` to have:
 
-- a height of 5 inches, and
-- a width of 3 inches.
+-   a height of 5 inches, and
+-   a width of 3 inches.
 
 Make sure to save the image as well. Can you locate the saved image in your files?
-
-

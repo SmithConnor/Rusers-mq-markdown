@@ -124,6 +124,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 
 </head>
 
@@ -207,7 +210,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
   <li><a href="#section-outline" id="toc-section-outline" class="nav-link active" data-scroll-target="#section-outline"><span class="toc-section-number">4.1</span>  Section Outline</a></li>
-  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="toc-section-number">4.2</span>  Tables</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="toc-section-number">4.2</span>  Tables</a>
+  <ul class="collapse">
+  <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text"><span class="toc-section-number">4.2.1</span>  Text</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="toc-section-number">4.2.2</span>  Code</a></li>
+  </ul></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures"><span class="toc-section-number">4.3</span>  Figures</a>
   <ul class="collapse">
   <li><a href="#generated" id="toc-generated" class="nav-link" data-scroll-target="#generated"><span class="toc-section-number">4.3.1</span>  Generated</a></li>
@@ -246,14 +253,129 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="tables" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="tables"><span class="header-section-number">4.2</span> Tables</h2>
+<section id="text" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="text"><span class="header-section-number">4.2.1</span> Text</h3>
+<table class="table">
+<caption>Not the round table!</caption>
+<thead>
+<tr class="header">
+<th>Shape</th>
+<th>Sides</th>
+<th>Other</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Circle</td>
+<td>1</td>
+<td>Comfortable ring.</td>
+</tr>
+<tr class="even">
+<td>Triange</td>
+<td>3</td>
+<td>Umm…..</td>
+</tr>
+<tr class="odd">
+<td>Square</td>
+<td>4</td>
+<td>Yeah nah</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span> Shape   <span class="sc">|</span> Sides <span class="sc">|</span> Other             <span class="sc">|</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="er">|</span><span class="sc">---------</span><span class="er">|</span><span class="sc">-------</span><span class="er">|</span><span class="sc">-------------------</span><span class="er">|</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> Circle  <span class="sc">|</span> <span class="dv">1</span>     <span class="sc">|</span> Comfortable ring. <span class="sc">|</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> Triange <span class="sc">|</span> <span class="dv">3</span>     <span class="sc">|</span> Umm.....          <span class="sc">|</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="er">|</span> Square  <span class="sc">|</span> <span class="dv">4</span>     <span class="sc">|</span> Yeah nah          <span class="sc">|</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="code" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="code"><span class="header-section-number">4.2.2</span> Code</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'kableExtra' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create fake data</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"Donald Duck"</span>, <span class="st">"Mickey Mouse"</span>, <span class="st">"Goofy"</span>),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">salaries =</span> <span class="fu">c</span>(<span class="dv">100000</span>, <span class="dv">150000</span>, <span class="dv">50000</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># create the table</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(df, <span class="st">"html"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> names </th>
+   <th style="text-align:right;"> salaries </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Donald Duck </td>
+   <td style="text-align:right;"> 100000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mickey Mouse </td>
+   <td style="text-align:right;"> 150000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Goofy </td>
+   <td style="text-align:right;"> 50000 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
 </section>
 <section id="figures" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="figures"><span class="header-section-number">4.3</span> Figures</h2>
 <section id="generated" class="level3" data-number="4.3.1">
 <h3 data-number="4.3.1" class="anchored" data-anchor-id="generated"><span class="header-section-number">4.3.1</span> Generated</h3>
+<p>Reproducible figures can be generated in the RMarkdown document in a code chunk.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># create fake data</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">category =</span> <span class="fu">c</span>(<span class="st">"Cats"</span>, <span class="st">"Dogs"</span>, <span class="st">"Birds"</span>),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">count =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">27</span>, <span class="dv">10</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># create the plot</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> category, <span class="at">y =</span> count, <span class="at">fill =</span> category)) <span class="sc">+</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Animals that stole my heart"</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"But not my socks"</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Animal"</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Number of times stolen"</span>) <span class="sc">+</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="figures_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 </section>
 <section id="external" class="level3" data-number="4.3.2">
 <h3 data-number="4.3.2" class="anchored" data-anchor-id="external"><span class="header-section-number">4.3.2</span> External</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dall_e_connor.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Connor Smith holding the “One ring to rule them all”</figcaption><p></p>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Connor Smith holding the <span class="st">"One ring to rule them all"</span>](dall_e_connor.png)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="chunk-options" class="level3" data-number="4.3.3">
 <h3 data-number="4.3.3" class="anchored" data-anchor-id="chunk-options"><span class="header-section-number">4.3.3</span> Chunk options</h3>
@@ -261,8 +383,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <table class="table">
 <caption>Chunk Options for Figures</caption>
 <colgroup>
-<col style="width: 15%">
-<col style="width: 84%">
+<col style="width: 23%">
+<col style="width: 76%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -291,7 +413,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 <p>Each of these options can be defined in each chunk of you can define them globally <em>(best included in your first code chunk)</em>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">chunk_option1 =</span> <span class="cn">TRUE</span>, <span class="at">chunk_option2 =</span> <span class="cn">FALSE</span>, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">chunk_option1 =</span> <span class="cn">TRUE</span>, <span class="at">chunk_option2 =</span> <span class="cn">FALSE</span>, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -305,9 +427,9 @@ Important
 <div class="callout-body-container callout-body">
 <p>Best practice is to save all your figures. This can be done by inserting the following code into your YAML header:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">keep_md</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">keep_md</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Note:</strong> This code will be different if you are using a different output format.</p>
 </div>
