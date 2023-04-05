@@ -1,0 +1,64 @@
+# Output Formats
+
+## Section Outline
+
+The section will showcase the different output formats you can create from the same document.
+
+**Teaching Time:** 5 Minutes
+
+**Working Time:** 5 Minutes
+
+## Generating Output
+
+### Knit
+
+You can select the type of output you would like when you "knit" the document. This is just the final stage of the process when you are letting RStudio know what you want to create.
+
+### `render`
+
+Instead of using the GUI, we can instead use the console to create our document. The type of documents we can create are as follows:
+
+-   `html_document`
+-   `pdf_document`
+-   `word_document`
+
+By typing the following into console, we can compile our RMarkdown document:
+
+```{r}
+#| eval: false
+rmarkdown::render("lotr.Rmd", output_format = "html_document")
+```
+
+## YAML
+
+For ease of use, it is often best to define what type of document you would like to create in the text file. This can be done by adding the following to your YAML header
+
+```{yaml}
+#| eval: false
+
+title: "Lord of the Rings"
+ouput: html_document
+```
+
+## Exercise
+
+Attempt to generate all three types fo reports:
+
+1.  HyperText Markup Language (.html)
+2.  Portable Document Format (.pdf)
+3.  Microsoft Word (.docx)
+
+::: callout-tip
+## PDF Issues
+
+It is not uncommon to have issues with creating PDF documents. The most common problem is that LaTeX has not been installed. Try the following code:
+
+```{r}
+#| eval: false
+
+install.packages("tinytex")
+tinytex::install_tinytex()
+```
+
+If that does not work, the problem may be a little more complex and outside the scope of this workshop.
+:::

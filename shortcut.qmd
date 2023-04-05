@@ -1,0 +1,33 @@
+# Keyboard Shortcuts
+
+## Section Outline
+
+The section will make your life easier in the long run.
+
+**Teaching Time:** 5 Minutes
+
+**Working Time:** 0 Minutes
+
+## My List
+
+Below is a curated list of shortcuts that can be used for RMarkdown. To show a more extensive list try pressing `Alt+Shift+K` (Windows/Linux) or `Option+Shift+K` (MacOS).
+
+| Action      | Windows/Linux | Mac  | 
+|-------------|---------------|----------------|
+| Knit document | Ctrl + Shift + K | Cmd + Shift + K |
+| Insert chunk  | Ctrl + Alt + I   | Cmd + Option + I |
+| Run current chunk | Ctrl + Alt + C | Cmd + Option + C |
+| Run all chunks above | Ctrl + Alt + P | Cmd + Option + P |
+| Run all chunks | Ctrl + Alt + R | Cmd + Option + R |
+| Un/Comment out a line   | Ctrl + Shift + C | Cmd + Shift + C| 
+| Reformat Code | Ctrl + Shift + A | Cmd + Shift + A| 
+| Spell-check | F7 | F7 |
+
+
+
+## Exercise
+
+Using the the document `lotr.Rmd`:
+
+1. Format the code in the code chunk labelled `ugly_code`, and
+2. Check for any spelling mistakes.

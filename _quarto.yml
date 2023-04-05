@@ -1,0 +1,25 @@
+project:
+  type: book
+
+book:
+  title: "R Markdown: The One Tool to Rule Them All"
+  author: "Dr Connor Smith"
+  date: "23/03/2023"
+  chapters:
+    - index.qmd
+    - summary.qmd
+    - format.qmd
+    - shortcut.qmd
+    - figures.qmd
+    - citing.qmd
+    - latex.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+
+
+

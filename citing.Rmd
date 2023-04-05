@@ -1,0 +1,62 @@
+# Tables and Figures
+
+## Section Outline
+
+The section will assist you with including tables and figures into your RMarkdown document.
+
+**Teaching Time:** 10 Minutes
+
+**Working Time:** 5 Minutes
+
+## Tables
+
+## Figures
+
+### Generated
+
+### External
+
+### Chunk options
+
+Below is a curated list of chunk options for figures. As you learn more, this list might vary for you.
+
+| Option       | Description                                                                 |
+|--------------|-----------------------------------------------------------------------------|
+| `fig.height` | Height of the figure in inches. (Coded as 9 not "9")                        |
+| `fig.width`  | Width of the figure in inches. (Coded as 9 not "9")                         |
+| `fig.align`  | Where do you want your figure i.e. `default`, `centre`, `left`, or `right`? |
+| `fig.cap`    | Add a caption to your figure.                                               |
+
+: Chunk Options for Figures
+
+Each of these options can be defined in each chunk of you can define them globally *(best included in your first code chunk)*:
+
+```{r}
+#| eval: false
+knitr::opts_chunk$set(chunk_option1 = TRUE, chunk_option2 = FALSE, ...)
+```
+
+::: callout-important
+
+Best practice is to save all your figures. This can be done by inserting the following code into your YAML header:
+
+```{YAML}
+output:
+  html_document:
+    keep_md: true
+```
+
+**Note:** This code will be different if you are using a different output format.
+
+:::
+
+### Exercise
+
+Change the figure in `lotr.Rmd` to have:
+
+- a height of 5 inches, and
+- a width of 3 inches.
+
+Make sure to save the image as well. Can you locate the saved image in your files?
+
+

@@ -1,0 +1,72 @@
+# Mathematics
+
+## Section Outline
+
+The section will assist you creating and including mathematical equations in your Markdown documents.
+
+**Teaching Time:** 5 Minutes
+
+**Working Time:** 5 Minutes
+
+## Creating LaTeX code
+
+### New Equations
+
+Consider the equation $y = mx+b$, this can be written inline as
+
+```{}
+$y = mx+b$
+```
+
+or it can be written as
+
+$$
+y = mx+b
+$$
+
+```{}
+$$
+y = mx+b
+$$
+```
+
+In your own time, please consider having a look at [LaTeX-Tutorial.com](https://latex-tutorial.com/tutorials/)
+
+### Borrowed Equations
+
+With the the range of external tools available, it is very easy to take equations from external sources and convert that equation to LaTeX.
+
+::: {.panel-tabset}
+
+## HTML
+
+If you are looking at an equation on a HTML document, the code can easily be copied by:
+
+1. Right clicking the desired equation
+2. Selecting "Show Math As" then "TeX Commands"
+3. Copy the LaTeX code that is shown.
+
+## Other Sources
+
+If you do not have access to a HTML version of your equation, [Mathpix is a AI powered document conversion technology](https://mathpix.com/).
+
+We will not cover hot to use this tool, but it can be extremely helpful in many different situations.
+
+::: {.callout-note}
+There are currently two free versions of the Mathpix subscription
+:::
+
+:::
+
+
+## Exercise
+
+Can you put the following equation into your working RMarkdown document?
+
+$$
+\text{Maybe}=\frac{\text{Yes}}{\text{No}} + \frac{\text{No}}{\text{Yes}}
+$$
+
+
+
+

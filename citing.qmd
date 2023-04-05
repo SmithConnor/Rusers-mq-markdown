@@ -1,0 +1,68 @@
+# Citing
+
+## Section Outline
+
+The section will assist you with including citations and referencing in your document.
+
+**Teaching Time:** 10 Minutes
+
+**Working Time:** 5 Minutes
+
+## Bibliography
+
+If you are still deciding of a referencing pipeline, I would suggest **Zotero** and **Better Bibtex** *(More information can be provided outside this workshop)*.
+
+In your YAML header you need to define your bibliography file i.e.
+
+```{yaml}
+#| eval: false
+output: html_document
+bibliography: refs.bib
+```
+
+and then you are able to define your citation style:
+
+```{yaml}
+#| eval: false
+output: html_document
+bibliography: refs.bib
+csl: apa.csl
+```
+
+To cite an object from your bibliography, you use `[@ref-handle]` where `@ref-handle` matches the desired object from your bibliography.
+
+## Figures, Tables, and Sections
+
+- **Figures:** `\@ref(fig:chunk-name))`
+- **Tables:** `\@ref(tab:chunk-name))`
+- **Sections:** `\@ref(sec-name)`
+
+For figures and tables, `chunk-name` is defined at the top of each chunk. Sections are named in the following way:
+
+```{r}
+#| eval: false
+## Section 1 {#sec-name}
+```
+
+## Equations
+
+To reference an equation you must first name that equation `(\#eq:label)` where `label` is the name you select.
+
+To reference this equation you use type `\@ref(eqn:label)`.
+
+::: callout-important
+You must define the equation in LaTeX using:
+
+```{}
+\begin{equation} (\#eqn:label)
+...
+\end{equation}
+```
+:::
+
+## Exercise
+
+Reference the following:
+
+1. Either the plot or figure, and
+2. One journal article from the bibliography provided.

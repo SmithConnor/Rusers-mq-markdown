@@ -1,0 +1,26 @@
+# Introduction {.unnumbered}
+
+Welcome to the online book for the Lord of the Rings (LotR) R Markdown workshop.
+
+Through this workshop, you will be provided with the knowledge and skills that you will be able to:
+
+- Create your own R Markdown documents
+- Export your R Markdown documents to a range of other formats (HTML, PDF, and Word)
+- Work with:
+    - Figures and tables
+    - Equations
+    - References
+    
+# Workshop Files {.unnumbered}
+
+For this workshop you will need the following 3 files:
+
+- `lotr.Rmd`
+- `lotr_clean.tsv`
+- `lotr_ref.bib`
+
+# Workshops {.unnumbered}
+
+# Acknowledgements {.unnumbered}
+
+# About the Author {.unnumbered}

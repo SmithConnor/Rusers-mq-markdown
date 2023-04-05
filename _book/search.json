@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R Markdown: The One Tool to Rule Them All",
+    "section": "",
+    "text": "Introduction\nWelcome to the online book for the Lord of the Rings (LotR) R Markdown workshop.\nThrough this workshop, you will be provided with the knowledge and skills that you will be able to:\n\nCreate your own R Markdown documents\nExport your R Markdown documents to a range of other formats (HTML, PDF, and Word)\nWork with:\n\nFigures and tables\nEquations\nReferences\n\n\n\n\nWorkshop Files\nFor this workshop you will need the following 3 files:\n\nlotr.Rmd\nlotr_clean.tsv\nlotr_ref.bib\n\n\n\nWorkshops\n\n\nAcknowledgements\n\n\nAbout the Author"
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "1  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "format.html#section-outline",
+    "href": "format.html#section-outline",
+    "title": "2  Output Formats",
+    "section": "2.1 Section Outline",
+    "text": "2.1 Section Outline\nThe section will showcase the different output formats you can create from the same document.\nTeaching Time: 5 Minutes\nWorking Time: 5 Minutes"
+  },
+  {
+    "objectID": "format.html#generating-output",
+    "href": "format.html#generating-output",
+    "title": "2  Output Formats",
+    "section": "2.2 Generating Output",
+    "text": "2.2 Generating Output\n\n2.2.1 Knit\nYou can select the type of output you would like when you “knit” the document. This is just the final stage of the process when you are letting RStudio know what you want to create.\n\n\n2.2.2 render\nInstead of using the GUI, we can instead use the console to create our document. The type of documents we can create are as follows:\n\nhtml_document\npdf_document\nword_document\n\nBy typing the following into console, we can compile our RMarkdown document:\n\nrmarkdown::render(\"lotr.Rmd\", output_format = \"html_document\")"
+  },
+  {
+    "objectID": "format.html#yaml",
+    "href": "format.html#yaml",
+    "title": "2  Output Formats",
+    "section": "2.3 YAML",
+    "text": "2.3 YAML\nFor ease of use, it is often best to define what type of document you would like to create in the text file. This can be done by adding the following to your YAML header\n\ntitle: \"Lord of the Rings\"\nouput: html_document"
+  },
+  {
+    "objectID": "format.html#exercise",
+    "href": "format.html#exercise",
+    "title": "2  Output Formats",
+    "section": "2.4 Exercise",
+    "text": "2.4 Exercise\nAttempt to generate all three types fo reports:\n\nHyperText Markup Language (.html)\nPortable Document Format (.pdf)\nMicrosoft Word (.docx)\n\n\n\n\n\n\n\nPDF Issues\n\n\n\nIt is not uncommon to have issues with creating PDF documents. The most common problem is that LaTeX has not been installed. Try the following code:\n\ninstall.packages(\"tinytex\")\ntinytex::install_tinytex()\n\nIf that does not work, the problem may be a little more complex and outside the scope of this workshop."
+  },
+  {
+    "objectID": "shortcut.html#section-outline",
+    "href": "shortcut.html#section-outline",
+    "title": "3  Keyboard Shortcuts",
+    "section": "3.1 Section Outline",
+    "text": "3.1 Section Outline\nThe section will make your life easier in the long run.\nTeaching Time: 5 Minutes\nWorking Time: 0 Minutes"
+  },
+  {
+    "objectID": "shortcut.html#my-list",
+    "href": "shortcut.html#my-list",
+    "title": "3  Keyboard Shortcuts",
+    "section": "3.2 My List",
+    "text": "3.2 My List\nBelow is a curated list of shortcuts that can be used for RMarkdown. To show a more extensive list try pressing Alt+Shift+K (Windows/Linux) or Option+Shift+K (MacOS).\n\n\n\nAction\nWindows/Linux\nMac\n\n\n\n\nKnit document\nCtrl + Shift + K\nCmd + Shift + K\n\n\nInsert chunk\nCtrl + Alt + I\nCmd + Option + I\n\n\nRun current chunk\nCtrl + Alt + C\nCmd + Option + C\n\n\nRun all chunks above\nCtrl + Alt + P\nCmd + Option + P\n\n\nRun all chunks\nCtrl + Alt + R\nCmd + Option + R\n\n\nUn/Comment out a line\nCtrl + Shift + C\nCmd + Shift + C\n\n\nReformat Code\nCtrl + Shift + A\nCmd + Shift + A\n\n\nSpell-check\nF7\nF7"
+  },
+  {
+    "objectID": "shortcut.html#exercise",
+    "href": "shortcut.html#exercise",
+    "title": "3  Keyboard Shortcuts",
+    "section": "3.3 Exercise",
+    "text": "3.3 Exercise\nUsing the the document lotr.Rmd:\n\nFormat the code in the code chunk labelled ugly_code, and\nCheck for any spelling mistakes."
+  },
+  {
+    "objectID": "figures.html#section-outline",
+    "href": "figures.html#section-outline",
+    "title": "4  Tables and Figures",
+    "section": "4.1 Section Outline",
+    "text": "4.1 Section Outline\nThe section will assist you with including tables and figures into your RMarkdown document.\nTeaching Time: 10 Minutes\nWorking Time: 5 Minutes"
+  },
+  {
+    "objectID": "figures.html#tables",
+    "href": "figures.html#tables",
+    "title": "4  Tables and Figures",
+    "section": "4.2 Tables",
+    "text": "4.2 Tables"
+  },
+  {
+    "objectID": "figures.html#figures",
+    "href": "figures.html#figures",
+    "title": "4  Tables and Figures",
+    "section": "4.3 Figures",
+    "text": "4.3 Figures\n\n4.3.1 Generated\n\n\n4.3.2 External\n\n\n4.3.3 Chunk options\nBelow is a curated list of chunk options for figures. As you learn more, this list might vary for you.\n\nChunk Options for Figures\n\n\n\n\n\n\nOption\nDescription\n\n\n\n\nfig.height\nHeight of the figure in inches. (Coded as 9 not “9”)\n\n\nfig.width\nWidth of the figure in inches. (Coded as 9 not “9”)\n\n\nfig.align\nWhere do you want your figure i.e. default, centre, left, or right?\n\n\nfig.cap\nAdd a caption to your figure.\n\n\n\nEach of these options can be defined in each chunk of you can define them globally (best included in your first code chunk):\n\nknitr::opts_chunk$set(chunk_option1 = TRUE, chunk_option2 = FALSE, ...)\n\n\n\n\n\n\n\nImportant\n\n\n\nBest practice is to save all your figures. This can be done by inserting the following code into your YAML header:\n\noutput:\n  html_document:\n    keep_md: true\n\nNote: This code will be different if you are using a different output format.\n\n\n\n\n4.3.4 Exercise\nChange the figure in lotr.Rmd to have:\n\na height of 5 inches, and\na width of 3 inches.\n\nMake sure to save the image as well. Can you locate the saved image in your files?"
+  },
+  {
+    "objectID": "citing.html#section-outline",
+    "href": "citing.html#section-outline",
+    "title": "5  Citing",
+    "section": "5.1 Section Outline",
+    "text": "5.1 Section Outline\nThe section will assist you with including citations and referencing in your document.\nTeaching Time: 10 Minutes\nWorking Time: 5 Minutes"
+  },
+  {
+    "objectID": "citing.html#bibliography",
+    "href": "citing.html#bibliography",
+    "title": "5  Citing",
+    "section": "5.2 Bibliography",
+    "text": "5.2 Bibliography\nIf you are still deciding of a referencing pipeline, I would suggest Zotero and Better Bibtex (More information can be provided outside this workshop).\nIn your YAML header you need to define your bibliography file i.e.\n\noutput: html_document\nbibliography: refs.bib\n\nand then you are able to define your citation style:\n\noutput: html_document\nbibliography: refs.bib\ncsl: apa.csl\n\nTo cite an object from your bibliography, you use [@ref-handle] where @ref-handle matches the desired object from your bibliography."
+  },
+  {
+    "objectID": "citing.html#figures-tables-and-sections",
+    "href": "citing.html#figures-tables-and-sections",
+    "title": "5  Citing",
+    "section": "5.3 Figures, Tables, and Sections",
+    "text": "5.3 Figures, Tables, and Sections\n\nFigures: \\@ref(fig:chunk-name))\nTables: \\@ref(tab:chunk-name))\nSections: \\@ref(sec-name)\n\nFor figures and tables, chunk-name is defined at the top of each chunk. Sections are named in the following way:\n\n## Section 1 {#sec-name}"
+  },
+  {
+    "objectID": "citing.html#equations",
+    "href": "citing.html#equations",
+    "title": "5  Citing",
+    "section": "5.4 Equations",
+    "text": "5.4 Equations\nTo reference an equation you must first name that equation (\\#eq:label) where label is the name you select.\nTo reference this equation you use type \\@ref(eqn:label).\n\n\n\n\n\n\nImportant\n\n\n\nYou must define the equation in LaTeX using:\n\\begin{equation} (\\#eqn:label)\n...\n\\end{equation}"
+  },
+  {
+    "objectID": "citing.html#exercise",
+    "href": "citing.html#exercise",
+    "title": "5  Citing",
+    "section": "5.5 Exercise",
+    "text": "5.5 Exercise\nReference the following:\n\nEither the plot or figure, and\nOne journal article from the bibliography provided."
+  },
+  {
+    "objectID": "latex.html#section-outline",
+    "href": "latex.html#section-outline",
+    "title": "6  Mathematics",
+    "section": "6.1 Section Outline",
+    "text": "6.1 Section Outline\nThe section will assist you creating and including mathematical equations in your Markdown documents.\nTeaching Time: 5 Minutes\nWorking Time: 5 Minutes"
+  },
+  {
+    "objectID": "latex.html#creating-latex-code",
+    "href": "latex.html#creating-latex-code",
+    "title": "6  Mathematics",
+    "section": "6.2 Creating LaTeX code",
+    "text": "6.2 Creating LaTeX code\n\n6.2.1 New Equations\nConsider the equation \\(y = mx+b\\), this can be written inline as\n$y = mx+b$\nor it can be written as\n\\[\ny = mx+b\n\\]\n$$\ny = mx+b\n$$\nIn your own time, please consider having a look at LaTeX-Tutorial.com\n\n\n6.2.2 Borrowed Equations\nWith the the range of external tools available, it is very easy to take equations from external sources and convert that equation to LaTeX.\n\nHTMLOther Sources\n\n\nIf you are looking at an equation on a HTML document, the code can easily be copied by:\n\nRight clicking the desired equation\nSelecting “Show Math As” then “TeX Commands”\nCopy the LaTeX code that is shown.\n\n\n\nIf you do not have access to a HTML version of your equation, Mathpix is a AI powered document conversion technology.\nWe will not cover hot to use this tool, but it can be extremely helpful in many different situations.\n\n\n\n\n\n\nNote\n\n\n\nThere are currently two free versions of the Mathpix subscription"
+  },
+  {
+    "objectID": "latex.html#exercise",
+    "href": "latex.html#exercise",
+    "title": "6  Mathematics",
+    "section": "6.3 Exercise",
+    "text": "6.3 Exercise\nCan you put the following equation into your working RMarkdown document?\n\\[\n\\text{Maybe}=\\frac{\\text{Yes}}{\\text{No}} + \\frac{\\text{No}}{\\text{Yes}}\n\\]"
+  }
+]
