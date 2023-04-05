@@ -1,7 +1,41 @@
 # Summary
 
-In summary, this book has no content whatsoever.
+The basic gist of RMarkdown is as follows:
+
+1.  Create a text file and save it as a `.Rmd`
+2.  Fill it with plain text and code
+3.  Compile
+
+## Markdown Syntax
+
+You can use the visual editor for a lot of this but the basic syntax is outlined below:
+
+| Style       | Format               |
+|-------------|----------------------|
+| *Italic*    | \*text\* or \_text\_ |
+| **Bold**    | \*\*text\*\*         |
+| Inline Code | \`text\`             |
+| Hyperlinks  | \[text\]\(link\)         |
+| Subscript   | \~text\~               |
+| Superscript | \^text\^               |
+
+: Basic Syntax for RMarkdown
+
+
+For different sections use headers:
 
 ```{r}
-1 + 1
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
 ```
+
+and if you do not want them numbered just add `{.unnumbered}` afterwards.
+
+## Exercise
+
+Add a hyperlink to `lotr.rmd` that links to this document. Also make sure that the link text is **bold**

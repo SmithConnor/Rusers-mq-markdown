@@ -4,14 +4,21 @@
     "href": "index.html",
     "title": "R Markdown: The One Tool to Rule Them All",
     "section": "",
-    "text": "Introduction\nWelcome to the online book for the Lord of the Rings (LotR) R Markdown workshop.\nThrough this workshop, you will be provided with the knowledge and skills that you will be able to:\n\nCreate your own R Markdown documents\nExport your R Markdown documents to a range of other formats (HTML, PDF, and Word)\nWork with:\n\nFigures and tables\nEquations\nReferences\n\n\n\n\nWorkshop Files\nFor this workshop you will need the following 3 files:\n\nlotr.Rmd\nlotr_clean.tsv\nlotr_ref.bib\n\n\n\nWorkshops\n\n\nAcknowledgements\n\n\nAbout the Author"
+    "text": "Introduction\nWelcome to the online book for the Lord of the Rings (LotR) R Markdown workshop.\nThrough this workshop, you will be provided with the knowledge and skills that you will be able to:\n\nCreate your own R Markdown documents\nExport your R Markdown documents to a range of other formats (HTML, PDF, and Word)\nWork with:\n\nFigures and tables\nEquations\nReferences\n\n\n\n\nWorkshop Files\nFor this workshop you will need the following 3 files:\n\nlotr.Rmd\nlotr_clean.tsv\nlotr_ref.bib\n\n\n\nWorkshops\n\nMacquarie University RUsers Group (06/04/2023)\n\n\n\nAcknowledgements\nThis work has used material from existing online books:\n\nhttps://bookdown.org/yihui/bookdown/\nhttps://rmd4sci.njtierney.com/\n\n\n\nAbout the Author\nConnor Smith is currently a Associcate Lecturer at Macquarie University."
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
+    "objectID": "summary.html#markdown-syntax",
+    "href": "summary.html#markdown-syntax",
     "title": "1  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+    "section": "1.1 Markdown Syntax",
+    "text": "1.1 Markdown Syntax\nYou can use the visual editor for a lot of this but the basic syntax is outlined below:\n\nBasic Syntax for RMarkdown\n\n\nStyle\nFormat\n\n\n\n\nItalic\n*text* or _text_\n\n\nBold\n**text**\n\n\nInline Code\n`text`\n\n\nHyperlinks\n[text](link)\n\n\nSubscript\n~text~\n\n\nSuperscript\n^text^\n\n\n\nFor different sections use headers:\n\n# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n#### Heading 4\n\nand if you do not want them numbered just add {.unnumbered} afterwards."
+  },
+  {
+    "objectID": "summary.html#exercise",
+    "href": "summary.html#exercise",
+    "title": "1  Summary",
+    "section": "1.2 Exercise",
+    "text": "1.2 Exercise\nAdd a hyperlink to lotr.rmd that links to this document. Also make sure that the link text is bold"
   },
   {
     "objectID": "format.html#section-outline",

@@ -21,6 +21,15 @@ For this workshop you will need the following 3 files:
 
 # Workshops {.unnumbered}
 
+1. Macquarie University RUsers Group (06/04/2023)
+
 # Acknowledgements {.unnumbered}
 
+This work has used material from existing online books:
+
+- <https://bookdown.org/yihui/bookdown/>
+- <https://rmd4sci.njtierney.com/>
+
 # About the Author {.unnumbered}
+
+Connor Smith is currently a Associcate Lecturer at Macquarie University.
